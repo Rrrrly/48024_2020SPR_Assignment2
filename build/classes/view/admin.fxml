@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.AdminController"
+      alignment="center" spacing="10" 
+      styleClass="root">
+    
+    <stylesheets>
+        <URL value="@style.css"/>
+    </stylesheets>
+    
+    <!--header, Icon + Library System-->
+    <HBox alignment="CENTER" spacing="15" styleClass="header">
+        <ImageView>
+            <image>
+                <Image url="@UTS.png"/>
+            </image>
+        </ImageView>
+        <Label styleClass="h1" text="Library System"/>
+    </HBox>
+    
+    <!--VBox is for setting the background colour-->
+    <VBox alignment="center" spacing="20" styleClass="footer">
+    <!--Buttons-->
+    <Button text="Add Patron" onAction="#handleAddPatron"/>
+    <Button fx:id="removePatronBtn" text="Remove Patron" onAction="#handleRemovePatron"/>
+    <Button fx:id="addBookBtn" text="Add Book" onAction="#handleAddBook"/>
+    <Button fx:id="removeBookBtn" text="Remove Book" onAction="#handleRemoveBook"/>
+    <Button fx:id="exitAdminBtn" text="Exit Administration" onAction="#handleExit"/>
+    </VBox>
+</VBox>

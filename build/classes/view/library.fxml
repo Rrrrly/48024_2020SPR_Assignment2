@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.LibraryController"
+      alignment="center" 
+      styleClass="root">
+
+    <!--header, Icon + Library System-->
+    <HBox spacing="15" alignment="CENTER" styleClass="header">
+        <ImageView>
+            <image>
+                <Image url="@UTS.png"/>
+            </image>
+        </ImageView>
+        <Label styleClass="h1" text="Library System"/>
+    </HBox>
+    
+    <!--VBox is for setting the background colour-->
+    <VBox alignment="center" spacing="20" styleClass="footer">
+        <!--Buttons-->
+        <Button text="Explore Catalogue" onAction="#handleExploreCatalogue"/>
+        <Button fx:id="patronRecordBtn" text="Patron Record" onAction="#handlePatronBtn"/>
+        <Button fx:id="favBookBtn" text="Favourite Books" onAction="#handleFavBooks"/>
+        <Button text="Adminstration Mode" onAction="#handleAdminMode"/>
+        <Button text="Exit" onAction="#handleExit"/>
+    </VBox>
+
+    <stylesheets>
+        <URL value="@style.css"/>
+    </stylesheets>
+</VBox>

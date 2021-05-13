@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.cell.*?>
+
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+    fx:controller="controller.ShowAllBooksController"
+    alignment="center" spacing="10"
+    styleClass="root">
+    
+    <stylesheets>
+        <URL value="@style.css"/>
+    </stylesheets>
+
+    <TableView fx:id="allBooksTv" items="${controller.library.catalogue.allBooks}">
+	<placeholder><Label text="No Books in Catalogue"/></placeholder> <!--when table is empty-->
+            <columns>
+		<TableColumn prefWidth="70" fx:id="titleClm" text="Title">
+                    <!-- This is commented out since we have set the cell value factory in Java -->
+                    <cellValueFactory><PropertyValueFactory property="title"/></cellValueFactory>
+                </TableColumn>
+		<TableColumn prefWidth="70" fx:id="authorClm" text="Author">
+                    <!-- This is commented out since we have set the cell value factory in Java -->
+                    <cellValueFactory><PropertyValueFactory property="author"/></cellValueFactory>
+		</TableColumn>
+		<TableColumn prefWidth="70" fx:id="genreClm" text="Genre">
+                    <!-- This is commented out since we have set the cell value factory in Java -->
+                    <cellValueFactory><PropertyValueFactory property="genre"/></cellValueFactory>
+		</TableColumn>
+            </columns>
+    </TableView>
+
+    <Button text="Close" onAction="#handleClose"/>
+</VBox>

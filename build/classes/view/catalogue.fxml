@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+    fx:controller="controller.CatalogueController"
+    alignment="center" spacing="10"
+    styleClass="root">
+
+    <stylesheets>
+        <URL value="@style.css"/>
+    </stylesheets>
+    
+        <!--header, Icon + Library System-->
+    <HBox alignment="CENTER" spacing="15" styleClass="header">
+        <ImageView>
+            <image>
+                <Image url="@UTS.png"/>
+            </image>
+        </ImageView>
+        <Label styleClass="h1" text="Library System"/>
+    </HBox>
+    
+    <!--VBox is for setting the background colour-->
+    <VBox alignment="center" spacing="20" styleClass="footer">
+    <!--Buttons-->
+    <Button fx:id="addPatronBtn" text="All Books" onAction="#handleShowAllBook"/>
+    <Button fx:id="removePatronBtn" text="Available Books" onAction="#handleAvaBook"/>
+    <Button fx:id="addBookBtn" text="Books By Genre" onAction="#handleByGenre"/>
+    <Button fx:id="removeBookBtn" text="Books By Author" onAction="#handlByAuthor"/>
+    <Button fx:id="exitAdminBtn" text="Borrow Books" onAction="#handleBorrow"/>
+    <Button fx:id="" text="Return Books" onAction="#handleReturn"/>
+    <Button fx:id="0" text="Place Hold" onAction="#handlePlaceHold"/>
+    <Button text="Exit Catalogue" onAction="#handleExit"/>
+    </VBox>
+</VBox>
